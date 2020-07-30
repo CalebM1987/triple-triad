@@ -1,15 +1,9 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { GameplayState } from './modules/gameplay'
+import store from './store'
 
-Vue.use(Vuex)
+const gameplayModule = new GameplayState({ store, name: 'gameplay'})
 
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+export {
+  store,
+  gameplayModule
+}

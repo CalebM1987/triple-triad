@@ -8,7 +8,10 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
+    "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "suppressImplicitAnyIndexErrors": true,
     "sourceMap": true,
     "baseUrl": ".",
     "types": [

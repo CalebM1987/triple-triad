@@ -13,7 +13,16 @@ module.exports = {
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    "semi": ["warn", "never"],
+    "@typescript-eslint/semi": ["warn", "never"],
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    "@typescript-eslint/interface-name-prefix": [
+      "error",
+      {
+          "prefixWithI": "always"
+      }
+    ]
   },
   overrides: [
     {

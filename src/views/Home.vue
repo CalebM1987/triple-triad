@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-container fluid class="p-3">
+      <b-row>
+        <b-col>
+          <card-game></card-game>
+        </b-col>
+
+      </b-row>
+    </b-container>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { Component, Vue } from 'vue-property-decorator'
+import { State, Mutation, Getter, Action } from 'vuex-class'
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+
+@Component({
+    components: {
+     CardGame: () => import('@/components/cards/CardGame.vue')
+    }
+  })
+export default class Home extends Vue {
+  
+  mounted(){
+    this.$hook.home = this
   }
 }
 </script>

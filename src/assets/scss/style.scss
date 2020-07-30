@@ -1,0 +1,75 @@
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {  
+  .card-base {
+    height: $card-ht-sm;
+    width: #{$card-ht-sm * .75 };
+  }
+
+  .grid-cell-base {
+    height: #{$card-ht-sm + 10};
+    height: #{$card-ht-sm * .75 + 10};
+  }
+
+  .card-image {
+    pointer-events: none;
+    height: #{$card-ht-sm * .85};
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media screen and (min-width: 768px) {  
+  .card-base {
+    height: $card-ht-md;
+    width: #{$card-ht-md * .75 };
+  }
+
+  .card-image {
+    pointer-events: none;
+    height: #{$card-ht-md * .85};
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) { 
+  .card-base {
+    height: $card-ht-lg;
+    width: #{$card-ht-lg * .75 };
+  }
+
+  .card-image {
+    pointer-events: none;
+    height: #{$card-ht-lg * .85};
+    width: 100%;
+    object-fit: cover;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {  
+  .card-base {
+    height: $card-ht-xl;
+    width: #{$card-ht-xl * .75 };
+  }
+
+  .grid-cell {
+    height: #{$card-ht-xl + 10};
+    width: #{$card-ht-xl * .75 + 10};
+    margin: 0.15rem;
+    border: solid lightgray 2px;
+    border-radius: 4px;
+  }
+
+  .card-image {
+    pointer-events: none;
+    height: #{$card-ht-xl * .85};
+    width: 100%;
+    object-fit: cover;
+  }
+  
+}
+// 300x240

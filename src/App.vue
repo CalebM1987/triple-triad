@@ -4,11 +4,15 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <b-container fluid>
+      <router-view/>
+    </b-container>
   </div>
 </template>
 
 <style lang="scss">
+@import './assets/scss/style.scss';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,7 +22,7 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
 
   a {
     font-weight: bold;
