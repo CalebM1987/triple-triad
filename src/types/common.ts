@@ -91,9 +91,13 @@ export interface IPlayer extends IBasePlayer {
   
 export interface ICardInPlay {
   card?: ICard;
-
+  /** the original owner of the card */
   player?: IPlayer;
-
+  /** the direct owner of the card in play, being player 1 or 2.
+   * when a card is initially laid, the direct owner is the original owner,
+   * but if captured, the direct owner is the opponent.  This is also used 
+   * for the "direct" trade rule
+   */
   directOwner?: OneOrTwo;
 
   captured: boolean;
