@@ -13,6 +13,7 @@
               :player="player1"
               :dragEnabled="isPlayer1Turn"
           ></card-stack>
+          <div class="score">{{ player1Score }}</div>
         </div>
         </b-col>
 
@@ -31,6 +32,8 @@
               :player="player2"
               :dragEnabled="isPlayer2Turn"
               ></card-stack>
+
+              <div class="score">{{ player2Score }}</div>
           </div>
         </b-col>
 
