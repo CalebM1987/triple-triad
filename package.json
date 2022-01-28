@@ -6,8 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "link-bmi": "npm link ../bmi-lib-js/packages/dev-hooks"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "bootstrap-vue": "^2.15.0",

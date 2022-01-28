@@ -18,6 +18,7 @@
   import { updateTriadBoard } from '@/modules/gameplay/board'
   import draggable from 'vuedraggable'
   import '@/types/common'
+  import { updateHook } from '@/modules/dev-hooks'
 
   const emptyCellTemplate = {
     player: null,
@@ -53,7 +54,7 @@
     }
 
     mounted(){
-      this.$hook.board = this
+      updateHook({ board: this })
       console.log('BOARD IS: ', this.grid)
     }
 

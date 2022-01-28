@@ -34,6 +34,7 @@
   import { delay } from '@/modules/utils'
   import draggable from 'vuedraggable'
   import { IPlayer } from '../../types/common'
+  import { updateHook } from '@/modules/dev-hooks'
 
   type StackSide = 
     | 'left'
@@ -58,7 +59,7 @@
     discarded: number[] = []
 
     mounted(){
-      this.$hook.stack = this;
+      updateHook({ stack: this });
       console.log('CARD STACK CARDS: ', this.cards)
     }
 

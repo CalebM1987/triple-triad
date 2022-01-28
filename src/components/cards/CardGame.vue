@@ -54,6 +54,7 @@ import { sampleCards } from '@/data/cards'
 import { OneOrTwo } from '@/modules/rng/random'
 // import { sample } from 'random-js'
 import { TriadBoardGrid, ICardInPlay, IPlayer } from '@/types/common'
+import { updateHook } from '@/modules/dev-hooks'
 
 @Component({
     components: {
@@ -78,7 +79,7 @@ export default class CardGame extends Vue {
   player2Score = 5
   
   mounted(){
-    this.$hook.game = this
+    updateHook({ game: this })
     this.setPlayer({
       order: 1,
       id: 1,
@@ -128,6 +129,10 @@ export default class CardGame extends Vue {
     border-bottom: 2px solid red;
     display: inline-block;
     line-height: 0.85;
+  }
+
+  .player-header {
+    color: white;
   }
   
 </style>

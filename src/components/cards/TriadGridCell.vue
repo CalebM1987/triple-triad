@@ -28,6 +28,7 @@
   import { Mutation, State } from 'vuex-class'
   import draggable from 'vuedraggable'
   import { OneOrTwo } from '../../modules/rng/random'
+  import { updateHook } from '@/modules/dev-hooks'
 
   @Component({
     components: {
@@ -48,7 +49,7 @@
     player = 1
 
     mounted(){
-      this.$hook[`cell${this.cell}`] = this
+      updateHook( {[`cell${this.cell}`]: this })
       console.log('mounted grid cell: ', this.cell, this)
     }
 

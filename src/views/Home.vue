@@ -15,6 +15,7 @@
 // @ is an alias to /src
 import { Component, Vue } from 'vue-property-decorator'
 import { State, Mutation, Getter, Action } from 'vuex-class'
+import { updateHook } from '@/modules/dev-hooks'
 
 
 @Component({
@@ -25,7 +26,7 @@ import { State, Mutation, Getter, Action } from 'vuex-class'
 export default class Home extends Vue {
   
   mounted(){
-    this.$hook.home = this
+    updateHook({ home: this })
   }
 }
 </script>

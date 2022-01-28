@@ -1,5 +1,6 @@
 <template>
   <div 
+    ref="card"
     :class="['triad-card', 'card-base', 'noselect', `playerOrder-${playerOrder}`, captured ? 'captured': '']" 
     :title="card.label"
   >
@@ -29,8 +30,8 @@
 </template>
 
 <script lang="ts">
-  import { Component, Prop, Vue } from 'vue-property-decorator'
-import { OneOrTwo } from '../../modules/rng/random'
+  import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
+  import { OneOrTwo } from '../../modules/rng/random'
 
   @Component({
     filters: {
@@ -47,6 +48,12 @@ import { OneOrTwo } from '../../modules/rng/random'
     get totalValue(){
       return this.card ? this.card.top + this.card.bottom + this.card.left + this.card.right: 0
     }
+
+    // @Watch('captured')
+    // onCapturedChange(captured: boolean){
+    //   const elm = this.$refs.card as Element
+    //   // TODO: add flip animation
+    // }
 
   }
 

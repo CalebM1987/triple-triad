@@ -4,9 +4,9 @@ import './registerServiceWorker'
 import router from './router'
 import { store } from './store'
 import './assets/js/bootstrap'
-import { DevHookPlugin } from '@bmi/dev-hooks'
+import { createHook } from '@/modules/dev-hooks'
 
-Vue.use(DevHookPlugin)
+createHook({ name: 'hook' })
 
 Vue.config.productionTip = false
 
