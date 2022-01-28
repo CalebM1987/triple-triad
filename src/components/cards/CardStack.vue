@@ -33,7 +33,7 @@
   import { Mutation, State } from 'vuex-class'
   import { delay } from '@/modules/utils'
   import draggable from 'vuedraggable'
-  import { IPlayer } from '../../types/common'
+  import { IPlayer, ICard } from '../../types/common'
   import { updateHook } from '@/modules/dev-hooks'
 
   type StackSide = 

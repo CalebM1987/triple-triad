@@ -32,6 +32,7 @@
 <script lang="ts">
   import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
   import { OneOrTwo } from '../../modules/rng/random'
+  import { ICard } from '@/types/common'
 
   @Component({
     filters: {

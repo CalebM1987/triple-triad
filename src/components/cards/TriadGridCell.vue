@@ -29,6 +29,7 @@
   import draggable from 'vuedraggable'
   import { OneOrTwo } from '../../modules/rng/random'
   import { updateHook } from '@/modules/dev-hooks'
+   import { ICard } from '@/types/common'
 
   @Component({
     components: {
